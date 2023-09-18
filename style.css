@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(45deg, #190361 0%, #b0f 100%);
+  font-size: 1.6rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  animation: gradiente 10s ease infinite;
+  background-size: 200% 200%;
+}
+
+body,
+button {
+  font-family: "DM Sans", sans-serif;
+}
+
+button {
+  background: #7879f1;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: #5a5ad6;
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  background: #ffffff;
+  box-shadow: 0 2rem 5rem 0 rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+  width: min(42.8rem, 90%);
+  text-align: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 1.4rem;
+}
+
+h1,
+p {
+  color: #34355b;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2.4rem;
+}
+
+.screen1 img {
+  cursor: pointer;
+}
+.screen1 img:hover {
+  animation: vibrar 0.2s ease infinite;
+}
+
+.screen2 p {
+  color: #000;
+  text-align: center;
+  font-family: "Dancing Script";
+  font-size: 2.4rem;
+  font-weight: 400;
+  padding: 1rem;
+  background: #e4edf1;
+  box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(85, 85, 85, 0.5);
+  animation: crescer 1s ease 1;
+  position: relative;
+}
+.screen2 img {
+  margin: 6rem 0;
+}
+.screen2 button {
+  border: none;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  background: #ff9500;
+  color: #ffffff;
+}
+.screen2 button:hover {
+  background: #eb8900;
+}
+
+@keyframes crescer {
+  0% {
+    transform: scale(0.1);
+    top: 20rem;
+  }
+  100% {
+    transform: scale(1);
+    top: 0;
+  }
+}
+
+@keyframes gradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes vibrar {
+  0% {
+    margin-left: 0;
+    transform: rotate(0);
+  }
+  25% {
+    margin-left: 5px;
+    transform: rotate(3deg);
+  }
+  50% {
+    margin-left: 0;
+    transform: rotate(0);
+  }
+  75% {
+    margin-left: -5px;
+    transform: rotate(-3deg);
+  }
+  100% {
+    margin-left: 0;
+    transform: rotate(0);
+  }
+}
